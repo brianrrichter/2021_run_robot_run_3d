@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/2022-01-19-092511_389x478_scrot.png-18462bea1af4ef3e5d2e3195061a40b6.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://ui_assets/images/2022-01-19-092511_389x478_scrot.png"
+dest_files=[ "res://.import/2022-01-19-092511_389x478_scrot.png-18462bea1af4ef3e5d2e3195061a40b6.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/game_over.ogg-75e0b0cba5504e45c02f03c2d53d24e2.oggstr"
+
+[deps]
+
+source_file="res://sound_effects/voice_over_pack/Female/game_over.ogg"
+dest_files=[ "res://.import/game_over.ogg-75e0b0cba5504e45c02f03c2d53d24e2.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

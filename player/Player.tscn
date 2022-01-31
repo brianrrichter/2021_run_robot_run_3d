@@ -1,0 +1,74 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://player/Player.gd" type="Script" id=2]
+[ext_resource path="res://ui_assets/kenneyShadedDark/shadedDark24.png" type="Texture" id=3]
+[ext_resource path="res://ui_assets/kenneyShadedDark/shadedDark45.png" type="Texture" id=4]
+[ext_resource path="res://ui_assets/kenneyShadedDark/shadedDark25.png" type="Texture" id=5]
+[ext_resource path="res://ui_assets/kenneyShadedDark/shadedDark47.png" type="Texture" id=6]
+[ext_resource path="res://ui_assets/kenneyShadedDark/shadedDark17.png" type="Texture" id=7]
+[ext_resource path="res://ui_assets/kenneyShadedDark/shadedDark19.png" type="Texture" id=8]
+[ext_resource path="res://player/Robot.tscn" type="PackedScene" id=9]
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 0.311462
+height = 0.590855
+
+[node name="Player" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 5 )
+script = ExtResource( 2 )
+
+[node name="Robot" parent="." instance=ExtResource( 9 )]
+transform = Transform( -0.3, 0, 2.62268e-08, 0, 0.3, 0, -2.62268e-08, 0, -0.3, 0, 0, 0 )
+
+[node name="Area" type="Area" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.636206, 0 )
+shape = SubResource( 1 )
+
+[node name="Ui" type="Control" parent="."]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Ui"]
+self_modulate = Color( 1, 1, 1, 0.784314 )
+position = Vector2( 48, 416 )
+scale = Vector2( 2, 2 )
+normal = ExtResource( 3 )
+passby_press = true
+action = "ui_left"
+
+[node name="VoltarButton" type="TouchScreenButton" parent="Ui"]
+self_modulate = Color( 1, 1, 1, 0.784314 )
+position = Vector2( 64, 56 )
+scale = Vector2( 1.5, 1.5 )
+normal = ExtResource( 6 )
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="Ui"]
+self_modulate = Color( 1, 1, 1, 0.784314 )
+position = Vector2( 816, 416 )
+scale = Vector2( 2, 2 )
+normal = ExtResource( 5 )
+passby_press = true
+action = "ui_right"
+
+[node name="RestartButton" type="TouchScreenButton" parent="Ui"]
+self_modulate = Color( 1, 1, 1, 0.784314 )
+position = Vector2( 840, 56 )
+scale = Vector2( 1.5, 1.5 )
+normal = ExtResource( 4 )
+
+[node name="SoundTextureButton" type="TextureButton" parent="Ui"]
+margin_left = 272.0
+margin_top = 40.0
+margin_right = 320.0
+margin_bottom = 88.0
+focus_mode = 0
+toggle_mode = true
+enabled_focus_mode = 0
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

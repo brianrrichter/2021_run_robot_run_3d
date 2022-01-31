@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://gltf_kay_kit_dungeon/bench_Cube4411.mesh" type="ArrayMesh" id=1]
+
+[sub_resource type="SphereShape" id=1]
+radius = 0.508201
+
+[node name="ObstacleShort" type="Spatial"]
+
+[node name="bench_Cube4411" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.367846, -0.5, 0 )
+mesh = ExtResource( 1 )
+skeleton = NodePath("")
+material/0 = null
+
+[node name="Area" type="Area" parent="." groups=["harm"]]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
