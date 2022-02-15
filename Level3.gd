@@ -62,7 +62,8 @@ func _player_got_coin():
 	score += 1
 
 func _restart_requested():
-	var _r = get_tree().reload_current_scene()
+	# var _r = get_tree().reload_current_scene()
+	Global.goto_scene("res://Level3.tscn")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):

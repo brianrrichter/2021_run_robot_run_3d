@@ -119,7 +119,8 @@ func _restart_requested():
 	emit_signal("restart_requested")
 
 func _voltar_pressed():
-	var _r = get_tree().change_scene("res://MainMenu.tscn")
+	# var _r = get_tree().change_scene("res://MainMenu.tscn")
+	Global.goto_scene("res://MainMenu.tscn")
 
 func _sound_toggled(button_pressed):
 	AudioServer.set_bus_mute(0, button_pressed)

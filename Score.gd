@@ -40,7 +40,8 @@ func _new_entry_text_changed(text):
 		_update_list()
 
 func _voltar_pressed():
-	var _r = get_tree().change_scene("res://MainMenu.tscn")
+	# var _r = get_tree().change_scene("res://MainMenu.tscn")
+	Global.goto_scene("res://MainMenu.tscn")
 
 func _create_new_score_lineedit():
 	var dynamic_font = DynamicFont.new()
